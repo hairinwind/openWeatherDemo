@@ -1,6 +1,8 @@
 package com.openweather.demo.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -11,14 +13,22 @@ public class WeatherServiceImpl implements WeatherService {
 	
 	@Value("${appId}")
 	private String appId;
-	
+
 	@Value("${openWeatherApiUrl}")
 	private String openWeatherApiUrl;
 	
+	@Bean
+	public RestTemplate restTemplate() {
+	    return new RestTemplate();
+	}
+	
+	@Autowired
+    private RestTemplate restTemplate;
+	
 	@Override
 	public OpenWeatherResult getWeather(String city) {
-		RestTemplate restTemplate = new RestTemplate();
 		String url = buildOpenWeatherUrl(city);
+		System.out.println(url);
 		OpenWeatherResult openWeatherResult = restTemplate.getForObject(url, OpenWeatherResult.class);
 		return openWeatherResult;
 	}
