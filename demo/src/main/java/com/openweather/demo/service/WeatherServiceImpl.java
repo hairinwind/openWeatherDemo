@@ -28,7 +28,6 @@ public class WeatherServiceImpl implements WeatherService {
 	@Override
 	public OpenWeatherResult getWeather(String city) {
 		String url = buildOpenWeatherUrl(city);
-		System.out.println(url);
 		OpenWeatherResult openWeatherResult = restTemplate.getForObject(url, OpenWeatherResult.class);
 		return openWeatherResult;
 	}
