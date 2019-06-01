@@ -7,8 +7,7 @@
 <body>
 	<form action="#" th:action="@{/cityweather}" th:object="${city}" method="post">
 		<select th:field="*{name}">
-		    <option th:value="'london,uk'" th:text="London"></option>
-		    <option th:value="'hong kong,cn'" th:text="HongKong"></option>
+		    <option th:each="city : ${allCities}" th:value="${city.name}" th:text="${city.name}"></option>
 		</select>
 		<input type="submit" />
 	</form>
