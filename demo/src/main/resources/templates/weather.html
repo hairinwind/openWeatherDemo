@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Weather</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form action="#" th:action="@{/cityweather}" th:object="${city}" method="post">
+		<select th:field="*{name}">
+		    <option th:value="'london,uk'" th:text="London"></option>
+		    <option th:value="'hong kong,cn'" th:text="HongKong"></option>
+		</select>
+		<input type="submit" />
+	</form>
+	
+	<div th:if="${weather != null}">
+		<div>
+			<span>Date:</span>
+			<span th:text="${weather.date}"></span>
+		</div>
+		<div>
+			<span>City:</span>
+			<span th:text="${weather.city}"></span>
+		</div>
+		<div>
+			<span>Description:</span>
+			<span th:text="${weather.description}"></span>
+		</div>
+		<div>
+			<span>celsius/fahrenheit:</span>
+			<span th:text="${weather.celsius} + ' / ' + ${weather.fahrenheit}"></span>
+		</div>
+		<div>
+			<span>sunrise/sunset:</span>
+			<span th:text="${weather.sunriseFormatted} + ' / ' + ${weather.sunsetFormatted}"></span>
+		</div>
+	</div>
+</body>
+</html>
