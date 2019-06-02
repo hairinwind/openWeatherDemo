@@ -10,6 +10,7 @@
 - a generic error message, although it is not used here. I can explain more if you are interested in error handling.
 - java doc
 - unit test were implemented
+- appId and openWeatherApiUrl were put in application.properties
 
 ## How to run it 
 - git clone https://github.com/hairinwind/openWeatherDemo.git

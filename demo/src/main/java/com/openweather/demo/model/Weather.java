@@ -1,7 +1,6 @@
 package com.openweather.demo.model;
 
 import java.time.LocalDate;
-import java.time.ZoneId;
 
 import com.openweather.demo.util.DateUtil;
 import com.openweather.demo.util.TemperatureUtil;
