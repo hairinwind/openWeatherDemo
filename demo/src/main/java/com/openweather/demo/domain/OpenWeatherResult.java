@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/**
+ *This is the POJO to represent the json returned from OpenWeather 
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OpenWeatherResult {
 	private String name;

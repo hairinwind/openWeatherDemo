@@ -8,6 +8,9 @@ import org.springframework.web.client.RestTemplate;
 
 import com.openweather.demo.domain.OpenWeatherResult;
 
+/**
+ * Weather Service OpenWeatherMap Implementation class
+ */
 @Service
 public class WeatherServiceImpl implements WeatherService {
 	

@@ -1,17 +1,21 @@
 package com.openweather.demo.model;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 
 import com.openweather.demo.util.DateUtil;
 import com.openweather.demo.util.TemperatureUtil;
 
+/**
+ *This is the Model class of Weather 
+ */
 public class Weather {
 	private String city;
 	private LocalDate date;
 	private String description;
 	private double temprature;
-	private long sunriseTime;
-	private long sunsetTime;
+	private long sunriseTime; //long value in milliseconds
+	private long sunsetTime; //long value in milliseconds
 	public String getCity() {
 		return city;
 	}

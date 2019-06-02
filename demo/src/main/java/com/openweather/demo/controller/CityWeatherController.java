@@ -16,6 +16,9 @@ import com.openweather.demo.model.Weather;
 import com.openweather.demo.service.WeatherService;
 import com.openweather.demo.util.WeatherAdapter;
 
+/**
+ *This is the controller to process the requests of city weather 
+ */
 @Controller
 public class CityWeatherController {
 	
@@ -30,6 +33,11 @@ public class CityWeatherController {
 	@Autowired
 	private WeatherService weatherService;
 	
+	/**
+	 * This is the method to show the index page
+	 * @param model the mvc model
+	 * @return view name
+	 */
 	@GetMapping("/")
 	protected String index(Model model){
 		City city = new City();
@@ -38,6 +46,12 @@ public class CityWeatherController {
 		return "weather";
 	}
 
+	/**
+	 * This is the method to process when user selects one city
+	 * @param city the user selected city
+	 * @param model the mvc model
+	 * @return the view name
+	 */
 	@RequestMapping("/cityweather")
 	protected String getWeatherByCity(@ModelAttribute(value="city") City city, Model model){
 		model.addAttribute("allCities", allCities);

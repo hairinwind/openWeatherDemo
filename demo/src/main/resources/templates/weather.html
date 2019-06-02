@@ -31,8 +31,11 @@
 		</div>
 		<div>
 			<span>sunrise/sunset:</span>
-			<span th:text="${weather.sunriseFormatted} + ' / ' + ${weather.sunsetFormatted}"></span>
+			<span th:if="${weather.sunriseFormatted != null}" th:text="${weather.sunriseFormatted}"></span>
+			<span>/</span>
+			<span th:if="${weather.sunsetFormatted != null}" th:text="${weather.sunsetFormatted}"></span>
 		</div>
 	</div>
+	
 </body>
 </html>

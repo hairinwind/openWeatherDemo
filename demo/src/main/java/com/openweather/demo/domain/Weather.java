@@ -2,6 +2,9 @@ package com.openweather.demo.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/**
+ *This is the POJO to represent Weather section in the json returned from OpenWeather 
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Weather {
 	private int id;

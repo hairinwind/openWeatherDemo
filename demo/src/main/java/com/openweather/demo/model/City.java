@@ -1,5 +1,8 @@
 package com.openweather.demo.model;
 
+/**
+ *This is the Model class of City 
+ */
 public class City {
 	private String name;
 	
