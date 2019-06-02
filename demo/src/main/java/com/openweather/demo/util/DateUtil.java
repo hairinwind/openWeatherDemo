@@ -18,7 +18,7 @@ import org.springframework.util.CollectionUtils;
 public class DateUtil {
 	/**
 	 * return the formatted time in 12 hour format by long value of date and the city
-	 * @param dateLong the long value of the date
+	 * @param dateLong the long value of the date in milliseconds
 	 * @param city the city name
 	 * @return the formatted time in 12 hour format, e.g 12:30pm
 	 */

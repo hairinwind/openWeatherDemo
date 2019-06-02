@@ -35,8 +35,8 @@ public class WeatherAdapterTest {
 		com.openweather.demo.model.Weather weatherAdapted = WeatherAdapter.adaptToWeather(mockOpenWeatherResult);
 		assertEquals("london", weatherAdapted.getCity());
 		assertEquals(280.0, weatherAdapted.getTemprature(), 0);
-		assertEquals(1559338756, weatherAdapted.getSunriseTime());
-		assertEquals(1559386995, weatherAdapted.getSunsetTime());
+		assertEquals(1559338756000L, weatherAdapted.getSunriseTime());
+		assertEquals(1559386995000L, weatherAdapted.getSunsetTime());
 		assertEquals("weather description", weatherAdapted.getDescription());
 	}
 
