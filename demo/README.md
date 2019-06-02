@@ -13,6 +13,7 @@
 
 ## How to run it 
 - git clone https://github.com/hairinwind/openWeatherDemo.git
+- cd openWeatherDemo
 - cd demo
 - mvn package
 - java -jar target/demo-0.0.1-SNAPSHOT.jar
